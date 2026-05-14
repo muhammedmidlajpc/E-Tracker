@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+# Expense Tracker App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A mobile expense tracking application built with React Native.  
+This app helps users manage their income and expenses using customizable cards for monthly budgets, trips, events, or any personal purpose.
 
-## Get started
+## Features
 
-1. Install dependencies
+- User Authentication
+  - Login and signup support
+  - Access data from any device when logged in
 
-   ```bash
-   npm install
-   ```
+- Guest Mode
+  - Use the app without creating an account
+  - Data stored locally on the device
+  - No cloud sync in guest mode
 
-2. Start the app
+- Expense & Income Tracking
+  - Add income and expenses inside cards
+  - Track monthly spending
+  - Create custom cards for trips, shopping, events, etc.
 
-   ```bash
-   npx expo start
-   ```
+- Cloud Database Support (Planned)
+  - Logged-in users will have data stored in MongoDB Atlas
+  - Real-time access across multiple devices
 
-In the output, you'll find options to open the app in a
+- Local Storage
+  - Guest users’ data stored securely in device local storage
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Tech Stack
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Frontend
+- React Native
+- Expo (if using Expo)
+- React Navigation
 
-## Get a fresh project
+### Backend (Planned)
+- Node.js
+- Express.js
+- MongoDB Atlas
 
-When you're ready, run:
+### Storage
+- AsyncStorage (Guest Mode)
+- MongoDB Atlas (Authenticated Users)
+
+## App Flow
+
+### Logged-In Users
+1. User logs in
+2. Data is stored in cloud database
+3. User can access expenses from any device
+
+### Guest Users
+1. User enters as guest
+2. Data stored locally on device
+3. Data remains only on that phone
+
+## Future Plans
+
+- Charts and analytics
+- Budget goals
+- Category filters
+- Dark mode
+- Export expenses as PDF
+- Shared group expense tracking
+- Notifications and reminders
+
+## Installation
 
 ```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+git clone <your-repo-link>
+cd expense-tracker
+npm install
+npm start
